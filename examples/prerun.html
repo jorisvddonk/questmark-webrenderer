@@ -1,0 +1,31 @@
+# QUESTMARK-OPTIONS-HEADER
+
+    {
+      "questmark-spec": "1.0",
+      "initial-state": "init",
+      "initial-context": {
+        "bar": "baz"
+      },
+      "options": {}
+    }
+
+# init
+
+Context variable "foo" is `"foo" getContext emit`
+
+# my_test_node
+
+TEST: "foo" is `"foo" getContext emit`
+
+`exit`
+
+```comment
+<script src="https://unpkg.com/questmark-webrenderer@1.0.1/dist/webRender-basic.js"></script>
+  <script>window.preRun = (vm) => {
+    console.log(vm);
+    vm.context.foo = "quux"; // set an additional context variable; great for debugging without messing with the initial context.
+    vm.programCounter = vm.labelMap.my_test_node; // Manually switch to a different initial context. NOTE: this WILL have unintended side-effects (e.g. the initial context will not be loaded!)
+    // return `false` to prevent the VM from auto-starting.
+  }</script>
+  <script src="https://unpkg.com/questmark-webrenderer@1.0.1/dist/main.js" type="module"></script>
+```
