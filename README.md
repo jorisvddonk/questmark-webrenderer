@@ -18,6 +18,22 @@ It allows you to create "live" Questmark documents that you can easily work on a
 
 (see [space-alien.md.html](https://github.com/jorisvddonk/questmark-webrenderer/blob/master/examples/space-alien.md.html) ([demo](https://raw.githack.com/jorisvddonk/questmark-webrenderer/main/examples/space-alien.md.html)) for an example)
 
+You can also save your Questmark documents as `.md` files, but then you need to open them using a webserver that forces the `text/html` Content-Type header. [local-web-server](https://github.com/lwsjs/local-web-server) can do this using the following config file, for example:
+
+```js
+module.exports = {
+  mime: {
+    'text/html': ['html', 'md']
+  }
+}
+```
+
+and then run
+
+```bash
+npx local-web-server --config-file ws_config.js
+```
+
 ## Customization
 
 You can currently customize the following things:
