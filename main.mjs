@@ -9,6 +9,15 @@ const vm = new QuestVM(body => {
 const vmState = parseMarkdown(document.body.textContent).qvmState;
 console.log(vmState);
 vm.loadVMState(vmState);
-vm.run();
+let run = true;
+if (globalThis.preRun) {
+  let result = globalThis.preRun(vm);
+  if (result === false) {
+    run = false;
+  }
+}
+if (run) {
+  vm.run();
+}
 
 globalThis.vm = vm;
