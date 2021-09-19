@@ -16,12 +16,12 @@ It allows you to create "live" Questmark documents that you can easily work on a
     ~~~
 3. Open the .html file on your browser!
 
-(see [space-alien.html](https://github.com/jorisvddonk/questmark-webrenderer/blob/master/examples/space-alien.html) ([demo](https://raw.githack.com/jorisvddonk/questmark-webrenderer/main/examples/space-alien.html)) for an example)
+(see [space-alien.md.html](https://github.com/jorisvddonk/questmark-webrenderer/blob/master/examples/space-alien.md.html) ([demo](https://raw.githack.com/jorisvddonk/questmark-webrenderer/main/examples/space-alien.md.html)) for an example)
 
 ## Customization
 
 You can currently customize the following things:
 
-* Extra foreign functions can be supplied to the VM by setting the global variable `extraForeignFunctions` to a JavaScript object, with the keys mapping to foreign functions passed to the VM. See [foreign-function.html](https://github.com/jorisvddonk/questmark-webrenderer/blob/master/examples/foreign-function.html) ([demo](https://raw.githack.com/jorisvddonk/questmark-webrenderer/main/examples/foreign-function.html)) for an example.
-* The VM can be modified prior to it starting, and can be prevented from auto-starting, by setting the global variable `preRun` to a function that receives the `vm` instance. Return `false` from this function to prevent the VM from auto-starting. See [prerun.html](https://github.com/jorisvddonk/questmark-webrenderer/blob/master/examples/prerun.html) ([demo](https://raw.githack.com/jorisvddonk/questmark-webrenderer/main/examples/prerun.html)).
+* Extra foreign functions can be supplied to the VM by setting the global variable `extraForeignFunctions` to a JavaScript object, with the keys mapping to foreign functions passed to the VM. See [foreign-function.md.html](https://github.com/jorisvddonk/questmark-webrenderer/blob/master/examples/foreign-function.md.html) ([demo](https://raw.githack.com/jorisvddonk/questmark-webrenderer/main/examples/foreign-function.md.html)) for an example.
+* The VM can be modified prior to it starting, and can be prevented from auto-starting, by setting the global variable `preRun` to a function that receives the `vm` instance. Return `false` from this function to prevent the VM from auto-starting. See [prerun.md.html](https://github.com/jorisvddonk/questmark-webrenderer/blob/master/examples/prerun.md.html) ([demo](https://raw.githack.com/jorisvddonk/questmark-webrenderer/main/examples/prerun.md.html)).
 
