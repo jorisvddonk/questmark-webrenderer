@@ -1,0 +1,26 @@
+{
+  "name": "questmark-webrenderer",
+  "version": "1.0.0",
+  "description": "A simple inline parser and renderer for Questmark, to create live testable Questmark documents easily",
+  "main": "dist/main.js",
+  "scripts": {
+    "prepublishOnly": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup -c rollup.config.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^20.0.0",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^13.0.4",
+    "rollup": "^2.56.3",
+    "rollup-plugin-copy": "^3.4.0",
+    "rollup-plugin-polyfill-node": "^0.7.0",
+    "rollup-plugin-shim": "^1.0.0"
+  },
+  "dependencies": {
+    "questmark": "^0.0.9",
+    "tzo": "^1.0.10"
+  }
+}
