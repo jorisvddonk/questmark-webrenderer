@@ -1,6 +1,6 @@
 {
   "name": "questmark-webrenderer",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A simple inline parser and renderer for Questmark, to create live testable Questmark documents easily",
   "main": "dist/main.js",
   "scripts": {
@@ -20,7 +20,7 @@
     "rollup-plugin-shim": "^1.0.0"
   },
   "dependencies": {
-    "questmark": "^0.0.9",
+    "questmark": "^0.0.10",
     "tzo": "^1.0.10"
   }
 }
