@@ -22,6 +22,7 @@ window.choices = (choices) => {
     choices.forEach(element => {
       const button = document.createElement('button');
       button.textContent = element.title;
+      button.classList.add('questmark');
       button.onclick = () => {
         clear();
         console.log(`Picked #${element.id}: "${element.title}" `);
@@ -35,12 +36,20 @@ window.emit = (body) => {
   if (firstTime === false) {
     document.body.textContent = '';
     firstTime = true;
+
+    const style = document.createElement('style');
+    style.textContent = `span.questmark {
+      white-space: pre-line;
+    }`;
+    document.head.appendChild(style);
+
     window.logElement = document.createElement('div');
     document.body.appendChild(window.logElement);
     log = (body) => {
       console.log(body);
       const span = document.createElement('span');
       span.textContent = body;
+      span.classList.add('questmark');
       window.logElement.appendChild(span);
     }
     clear = () => {
