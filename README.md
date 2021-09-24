@@ -10,8 +10,8 @@ It allows you to create "live" Questmark documents that you can easily work on a
 2. Add the following lines to the bottom of the file, exactly as shown:
     ~~~
     ```comment
-        <script src="https://unpkg.com/questmark-webrenderer@1.0.6/dist/webRender-basic.js"></script>
-        <script src="https://unpkg.com/questmark-webrenderer@1.0.6/dist/main.js" type="module"></script>
+        <script src="https://unpkg.com/questmark-webrenderer@1.0.5/dist/webRender-basic.js"></script>
+        <script src="https://unpkg.com/questmark-webrenderer@1.0.5/dist/main.js" type="module"></script>
     ```
     ~~~
 3. Open the .html file on your browser!
@@ -39,8 +39,8 @@ npx local-web-server --config-file ws_config.js
 Alternatively, you could load a .md file in your browser, open the browser console, and then paste and execute the following:
 
 ```javascript
-const qm_wr1 = document.createElement('script'); qm_wr1.setAttribute('src', 'https://unpkg.com/questmark-webrenderer@1.0.6/dist/webRender-basic.js');
-const qm_wr2 = document.createElement('script'); qm_wr2.setAttribute('type', 'module'); qm_wr2.setAttribute('src', 'https://unpkg.com/questmark-webrenderer@1.0.6/dist/main.js');
+const qm_wr1 = document.createElement('script'); qm_wr1.setAttribute('src', 'https://unpkg.com/questmark-webrenderer@1.0.5/dist/webRender-basic.js');
+const qm_wr2 = document.createElement('script'); qm_wr2.setAttribute('type', 'module'); qm_wr2.setAttribute('src', 'https://unpkg.com/questmark-webrenderer@1.0.5/dist/main.js');
 document.body.appendChild(qm_wr1);
 document.body.appendChild(qm_wr2);
 ```
