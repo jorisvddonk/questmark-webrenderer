@@ -1,6 +1,6 @@
 {
   "name": "questmark-webrenderer",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A simple inline parser and renderer for Questmark, to create live testable Questmark documents easily",
   "main": "dist/main.js",
   "scripts": {
