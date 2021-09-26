@@ -23,6 +23,8 @@ window.choices = (choices) => {
       const button = document.createElement('button');
       button.textContent = element.title;
       button.classList.add('questmark');
+      const event = new CustomEvent('selectQuestmarkOption', { detail: element });
+      window.dispatchEvent(event);
       button.onclick = () => {
         clear();
         console.log(`Picked #${element.id}: "${element.title}" `);
@@ -58,4 +60,4 @@ window.emit = (body) => {
   }
   log(body);
 };
-document.body.textcontent = '';
+document.body.textContent = '';
