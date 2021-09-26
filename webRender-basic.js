@@ -60,4 +60,3 @@ window.emit = (body) => {
   }
   log(body);
 };
-document.body.textContent = '';
