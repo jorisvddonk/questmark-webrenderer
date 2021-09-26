@@ -16,6 +16,6 @@
     "webpack-cli": "^4.8.0"
   },
   "dependencies": {
-    "questmark": "^0.0.33"
+    "questmark": "^0.0.34"
   }
 }

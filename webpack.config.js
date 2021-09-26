@@ -1,5 +1,6 @@
 const path = require('path');
 const CopyPlugin = require("copy-webpack-plugin");
+const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
   entry: './main.mjs',
@@ -9,7 +10,17 @@ module.exports = {
   },
   resolve: { fallback: { fs: false } },
   optimization: {
-    minimize: false, // TODO: re-enable again later; at the moment this breaks closebrace/openbrace in Tzo because minimization gets rid of their names, which are required to do brace matching
+    minimize: true,
+    mangleExports: false,
+    minimizer: [
+      new TerserPlugin({
+        parallel: true,
+        terserOptions: {
+          keep_classnames: true,
+          keep_fnames: true
+        },
+      }),
+    ],
   },
   plugins: [
     new CopyPlugin({
