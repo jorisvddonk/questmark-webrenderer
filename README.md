@@ -45,8 +45,6 @@ document.body.appendChild(qm_wr1);
 document.body.appendChild(qm_wr2);
 ```
 
-try it out [here](https://ghcdn.rawgit.org/jorisvddonk/questmark/master/examples/self-describing.md), for example!
-
 ## Customization
 
 You can currently customize the following things:
