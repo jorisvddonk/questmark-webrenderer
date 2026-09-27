@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Questmark webrenderer</title>
+  <meta name="description" content="A simple inline parser, interpreter and renderer for Questmark documents, so you can write and play them directly in the browser.">
+  <style>
+    :root {
+      --bg: #f7f6f3;
+      --fg: #1d1c1a;
+      --muted: #6b6a66;
+      --accent: #7c4dff;
+      --card: #ffffff;
+      --border: #e5e3de;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      line-height: 1.55;
+    }
+    main { max-width: 720px; margin: 0 auto; padding: 4rem 1.5rem; }
+    h1 { font-size: 2.1rem; margin: 0 0 0.35rem; }
+    .subtitle { color: var(--muted); margin: 0 0 2.5rem; }
+    h2 {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin: 2.5rem 0 1rem;
+    }
+    ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 1rem; }
+    li a {
+      display: block;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.1rem 1.3rem;
+      color: inherit;
+      text-decoration: none;
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }
+    li a:hover, li a:focus { border-color: var(--accent); box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+    .title { font-weight: 600; font-size: 1.1rem; }
+    li a:hover .title, li a:focus .title { color: var(--accent); }
+    .desc { color: var(--muted); margin-top: 0.15rem; font-size: 0.95rem; }
+    p code, li code { background: #ecebe7; padding: 0.1em 0.35em; border-radius: 4px; font-size: 0.9em; }
+    pre {
+      background: #1d1c1a;
+      color: #f7f6f3;
+      padding: 1rem 1.2rem;
+      border-radius: 10px;
+      overflow-x: auto;
+      font-size: 0.85rem;
+    }
+    footer { color: var(--muted); font-size: 0.85rem; margin-top: 3rem; }
+    footer a, main > p a { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Questmark webrenderer</h1>
+    <p class="subtitle">A simple inline parser, interpreter and renderer for Questmark documents — write Questmark and play it directly in your browser.</p>
+
+    <h2>Live demos</h2>
+    <ul>
+      <li>
+        <a href="./demos/space-alien.md.html">
+          <div class="title">Space Alien</div>
+          <div class="desc">A small conversation tree demonstrating states, options, context and preconditions.</div>
+        </a>
+      </li>
+      <li>
+        <a href="./demos/foreign-function.md.html">
+          <div class="title">Foreign functions</div>
+          <div class="desc">Extending a Questmark document with custom JavaScript functions via <code>extraForeignFunctions</code>.</div>
+        </a>
+      </li>
+      <li>
+        <a href="./demos/prerun.md.html">
+          <div class="title">Pre-run hook</div>
+          <div class="desc">Modifying (or preventing) the VM before it starts, using the <code>preRun</code> global.</div>
+        </a>
+      </li>
+    </ul>
+
+    <h2>Usage</h2>
+    <p>Save your Questmark document as an <code>.html</code> file and add these two scripts at the bottom:</p>
+    <pre>&lt;script src="https://unpkg.com/questmark-webrenderer/dist/webRender-basic.js"&gt;&lt;/script&gt;
+&lt;script src="https://unpkg.com/questmark-webrenderer/dist/main.js" type="module"&gt;&lt;/script&gt;</pre>
+    <p>Then open the file in your browser. See the <a href="https://github.com/jorisvddonk/questmark-webrenderer#readme">README</a> for the full details and customization options.</p>
+
+    <footer>
+      Part of <a href="https://github.com/jorisvddonk/questmark">Questmark</a>.
+      Source: <a href="https://github.com/jorisvddonk/questmark-webrenderer">questmark-webrenderer</a>.
+    </footer>
+  </main>
+</body>
+</html>
